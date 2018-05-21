@@ -1,6 +1,6 @@
 // pulls value from button "findbutton" and stores it
 let anagramSets = {}
-const newDiv = document.getElementById("listedAnagrams")
+const newDiv = document.getElementById("listedAnagrams");
 
 
 document.getElementById("findButton").onclick = function () {
