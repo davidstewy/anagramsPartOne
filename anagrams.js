@@ -1,30 +1,27 @@
+// pulls value from button "findbutton" and stores it
+let anagramSets = {}
+const newDiv = document.getElementById("listedAnagrams")
 
-document.getElementById("findButton").onclick = function() {
+
+document.getElementById("findButton").onclick = function () {
     const typedText = document.getElementById("input").value;
-    let anagramSets = {}
-    const sortedWord = "";
-    console.log(typedText);
-    // your code will go here ...
+
+    // alphabetizes the user's word
+    function alphabetize(wordToAlphabetize) {
+        return wordToAlphabetize.toLowerCase().split("").sort().join("").trim();
+    }
 
     
 
-
-    function alphabetize(typedText) {
-        sortedWord = typedText.toLowerCase().split("").sort().join("").trim();
-        return sortedWord;
-    //    return typedText.toLowerCase().split("").sort().join("").trim();
-
-      }
-      
-      for(let i=0; i<words.length; i++){
-        //   anagramSets["alphabetize(words[i]"] = 
-        //   console.log(alphabetize(words[i]));
-      }
-      
+    // alphabetizes the words
+    for (let i = 0; i < words.length; i++) {
+        if (alphabetize(words[i]) === alphabetize(typedText)){
+            // const newDiv = document.getElementById("listedAnagrams");
+            const textAnagram = document.createTextNode(words[i] + " ");
+            newDiv.appendChild(textAnagram);
+                //print to the page
+        }
+        
     }
 
-    // anagramSets = {
-    //     "ailr": ["lair", "liar", "rail"],
-    //     "aelst": ["least", "steal", ... ],
-    //      ...
-    //  };
+}
